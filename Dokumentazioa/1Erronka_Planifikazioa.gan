@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="2MG3_1Erronka" company="" webLink="http://" view-date="2025-12-22" view-index="0" gantt-divider-location="393" resource-divider-location="300" version="3.3.3312" locale="es_ES">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="223" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="84" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="85" order="2"/>
+        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#cccc00 #ffff66 #ffff00 #99ccff #ff3366 #33ff33 #ff9900 #ccccff #0000ff #f4f4f4]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="986543d932264e08a82761c81178aaa8" name="Errokarekin egunero lan egin." meeting="false" start="2025-11-17" duration="1" complete="0" expand="true"/>
+        <task id="1" uid="79e8f2b20308477e83d5b8ed2a02e7da" name="Planifikazioa egin" meeting="false" start="2025-10-28" duration="1" complete="0" expand="true"/>
+        <task id="2" uid="2a4508e3ba884174a077a4a7d5f9791d" name="Datu basearen eskema egin" color="#99ccff" meeting="false" start="2025-11-14" duration="1" complete="0" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" uid="576ee15df34e43c38898864b7b76575d" name="Datu basea zerbitzarian sartu" color="#99ccff" meeting="false" start="2025-11-17" duration="2" complete="0" expand="true"/>
+        <task id="4" uid="e0e3556651b04d10974290e1cb7a6e4f" name="C#eko logina garatu" color="#99ccff" meeting="false" start="2025-11-17" duration="2" complete="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" uid="2c83fb1699394a8d97154b8e929ff249" name="C#eko loginak zerbitzariaren kontra funtzionatzen duela erakutsi" color="#99ccff" meeting="false" start="2025-11-19" duration="2" complete="0" expand="true"/>
+        <task id="19" uid="db6ad169c3b641a5a24216755f46e7f8" name="Mahai gaineko TPV aplikazioan eskaerak egiteko aukera" color="#99ccff" meeting="false" start="2025-12-01" duration="3" complete="0" expand="true"/>
+        <task id="23" uid="74d40511a0bb42c1a23999b03c348235" name="Aplikazioa android studio datu baseetarako sarbidea" color="#99ccff" meeting="false" start="2026-01-07" duration="2" complete="0" expand="true"/>
+        <task id="24" uid="9e98cbfc64274c888dc7c4b5c21614be" name="Gailu mugikorretarako garapen teknologiak deskribatzen eta aztertzen ditu eta horien ezaugarriak eta gaitasunak ebaluatzen ditu" color="#99ccff" meeting="false" start="2026-01-08" duration="2" complete="0" expand="true"/>
+        <task id="33" uid="f0091ca4a2434556a36f003629bbaa85" name="TPV aplikazioa garatzea" color="#99ccff" meeting="false" start="2026-01-14" duration="3" complete="0" expand="true"/>
+        <task id="6" uid="0eaa7faebb3049219b346dbc38b1ba22" name="TPVko eta Gerente aplikazioko erabilpen kasu diagrama eta klase diagramak egin" color="#ff6666" meeting="false" start="2025-11-07" duration="2" complete="0" expand="true"/>
+        <task id="7" uid="99be6a9b3b644911addd0c21fd0e1c6e" name="Javako aplikazioan logina garatu eta zerbitzariaren aurka funtzionatzne duela baieztatu" color="#ff6666" meeting="false" start="2025-11-19" duration="2" complete="0" expand="true"/>
+        <task id="14" uid="7591b3e999bf4f099b16e8b80eea47e7" name="Aplikazioaren diseinu sistema sortu" color="#ff6666" meeting="false" start="2025-11-28" duration="3" complete="0" expand="true">
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="12" uid="7d8f3389deba492188618d4c57ed8d68" name="Gerentearen aplikazioan erabiltzaileak kudeatzeko aukera" color="#ff6666" meeting="false" start="2025-12-03" duration="3" complete="0" expand="true"/>
+        <task id="30" uid="9f54712f0977447086d42b908efd01c6" name="Dokumentazioa ongi osatuta entregatu" color="#ff3366" meeting="false" start="2026-01-12" duration="1" complete="0" expand="true"/>
+        <task id="31" uid="b87dc42f95f14441b64edea3c050994d" name="Erronkako aplikazioa garatu beharko da objetuei bideratuta (java eta C#)" color="#ff3366" meeting="false" start="2026-01-13" duration="3" complete="0" expand="true"/>
+        <task id="32" uid="7e09e449e53440bda1c46a26436c9245" name="Aplikazio guztietako diseinu sistema" color="#ff3366" meeting="false" start="2026-01-16" duration="1" complete="0" expand="true"/>
+        <task id="8" uid="c889e5b137b6452c8bad6223160f053c" name="Linux zerbitzaria montatu MiniPC batean, Apache, Mysql eta PHP admin aplikazioak dituena" color="#ffff66" meeting="false" start="2025-11-17" duration="2" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="9" uid="0342c98a1f3c4305bd01c9fff9716c18" name="Zerbitzari eta gure ekipoak eguneratu eta antibirusa pasatu." color="#ffff66" meeting="false" start="2025-11-19" duration="2" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" uid="683cfdc119f54233ac3deb510371dcac" name="Enpresako segurtasun politika dokumentu bat sortu" color="#ffff66" meeting="false" start="2025-11-21" duration="3" complete="0" expand="true"/>
+        <task id="20" uid="2ff3cb1c152c467cbfcc6103e9eff16b" name="Lan/SW/PatchPannel/Kableatua" color="#ffff66" meeting="false" start="2025-12-04" duration="1" complete="0" expand="true">
+            <depend id="21" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="21" uid="b41c46ffba124478b666059483db8277" name="Firewall (OPNSENSE)" color="#ffff66" meeting="false" start="2025-12-05" duration="1" complete="0" expand="true"/>
+        <task id="22" uid="9c629f17e68e4c54957e7555ede19f9e" name="Programa / DB kontsulta paramezitratuak" color="#ffff66" meeting="false" start="2025-12-08" duration="1" complete="0" expand="true"/>
+        <task id="34" uid="380f6721782e46148dda7f9c76414721" name="Erronkari azpiegitura bat emateko zerbitzaria erabiltzaile batzuk ezarriko dira DHCP/DNS/AD/Web Zerbitzaria/Datu Base Zerbitzaria..." color="#ffff66" meeting="false" start="2026-01-08" duration="1" complete="0" expand="true"/>
+        <task id="35" uid="aa8249fba9fb4888827db1e2c5df6cf3" name="LAN sarea langile mota ezeberdinentzat muntatu" color="#ffff66" meeting="false" start="2026-01-09" duration="1" complete="0" expand="true"/>
+        <task id="36" uid="cff09ffd38444043a0ebe7cf05a330e0" name="Wifi-a instalatu" color="#ffff66" meeting="false" start="2026-01-12" duration="1" complete="0" expand="true"/>
+        <task id="37" uid="c531e9ebfdf84589b81e54d900bfecd6" name="Erabiltzailearen PC-an diskoa partizionatuta msoffice, libreoffice, konprimitzaileak, berreskuratze puntuak, antibirusa eta MFA" color="#ffff66" meeting="false" start="2026-01-13" duration="2" complete="0" expand="true"/>
+        <task id="39" uid="3fe0f0148ac64fa3b415587e071915c2" name="Segurtasun politikak" color="#cccc00" meeting="false" start="2026-01-12" duration="1" complete="0" expand="true"/>
+        <task id="40" uid="661279a46d4b434590f31cfe5aec4a88" name="Mini PC zerbitzaria (DMZ) erabiltzaileak (LAN) eta interneteko atzipena modu seguruan komunikatzeko suhesia (firewall)" color="#cccc00" meeting="false" start="2026-01-15" duration="3" complete="0" expand="true"/>
+        <task id="11" uid="c114f8c4b51f48a5834d0858b08ba922" name="Enpresan erabiliko dugun moduluaren aukeraketaren dokumentazio teknikoa" color="#33ff33" meeting="false" start="2025-11-28" duration="1" complete="0" expand="true"/>
+        <task id="28" uid="fecb004a12674688a561d9a9681abb56" name="Odoo ERP-aren instalazioa linux edo windows-en" color="#33ff33" meeting="false" start="2026-01-12" duration="1" complete="0" expand="true"/>
+        <task id="29" uid="db4da870a0a14424a8cda0b87ee50edb" name="Zuen enpresan erabiliko duzuen moduluaren aurkezpena" color="#33ff33" meeting="false" start="2026-01-12" duration="1" complete="0" expand="true"/>
+        <task id="15" uid="e9818d536fea455eaf468d748c9491a7" name="Mugikorreko TPV aplikazioa diseinatu" color="#0000ff" meeting="false" start="2025-11-21" duration="1" complete="0" expand="true">
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="16" uid="d1702d35de594e4e9e322bc47b97c261" name="Mugikorreko TPV aplikazioa martxan jarri" color="#0000ff" meeting="false" start="2025-11-24" duration="2" complete="0" expand="true"/>
+        <task id="17" uid="cfd9cf85b305477f9483e6e7d94cc1f6" name="Txat aplikazioa 1.0" color="#ff9900" meeting="false" start="2025-12-01" duration="4" complete="0" expand="true"/>
+        <task id="27" uid="7bcc8a17c9cd4316b08861b6a72d1c4c" name="Aplikazio bat sortzea javan hariak eta socket-ak erabiliz txata sortzeko" color="#ff9900" meeting="false" start="2026-01-08" duration="3" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Iraitz" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Aratz" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Hodei" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="8" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
