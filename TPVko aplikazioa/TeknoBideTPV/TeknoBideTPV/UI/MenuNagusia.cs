@@ -16,5 +16,12 @@ namespace TeknoBideTPV.UI
         {
             InitializeComponent();
         }
+
+        private void MenuNagusia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -25,10 +25,10 @@ namespace TeknoBideTPV.Data
                     sessionFactory = Fluently.Configure()
                         .Database(MySQLConfiguration.Standard
                             .ConnectionString(c => c
-                                .Server("localhost")
+                                .Server("192.168.115.155")
                                 .Database("2mg3_1erronka")
-                                .Username("root")
-                                .Password("1MG2024")))
+                                .Username("3taldea")
+                                .Password("1234")))
                         .Mappings(m => m.FluentMappings.AddFromAssemblyOf<LangileaMap>())
                         .BuildSessionFactory();
                 }

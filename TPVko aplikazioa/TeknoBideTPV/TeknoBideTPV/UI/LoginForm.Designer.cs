@@ -82,6 +82,7 @@
             txtPasahitza.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPasahitza.Location = new Point(672, 442);
             txtPasahitza.Name = "txtPasahitza";
+            txtPasahitza.PasswordChar = '*';
             txtPasahitza.Size = new Size(381, 70);
             txtPasahitza.TabIndex = 4;
             // 
