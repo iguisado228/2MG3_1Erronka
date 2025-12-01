@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram name="Página-1" id="QZw_WX2CTTpwIjrBYLA5">
-    <mxGraphModel dx="1042" dy="1795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1220" dy="1798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,13 +19,13 @@
         <mxCell id="7xLqBqxdaizPzSlL25LT-8" value="Komanda bidali" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="740" y="140" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="7xLqBqxdaizPzSlL25LT-9" value="Eskaria ordaindu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7xLqBqxdaizPzSlL25LT-9" value="Kontua ordaindu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1050" y="-10" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7xLqBqxdaizPzSlL25LT-10" value="Soberakinak kalkulatu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1450" y="-70" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="7xLqBqxdaizPzSlL25LT-13" value="Kontuen zerrenda ikusi" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7xLqBqxdaizPzSlL25LT-13" value="Aktibo dauden erreserben zerrenda ikusi" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="240" y="-10" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7xLqBqxdaizPzSlL25LT-14" value="Gerentea" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
@@ -106,7 +106,7 @@
             <mxPoint x="190" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7xLqBqxdaizPzSlL25LT-38" value="Kontuaren egoera" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7xLqBqxdaizPzSlL25LT-38" value="Erreserbaren egoera" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="460" y="-10" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7xLqBqxdaizPzSlL25LT-39" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7xLqBqxdaizPzSlL25LT-1" target="7xLqBqxdaizPzSlL25LT-7" edge="1">
@@ -126,7 +126,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7xLqBqxdaizPzSlL25LT-42" value="Kontua aukeratu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="7xLqBqxdaizPzSlL25LT-42" value="Erreserba aukeratu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="655" y="-10" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="7xLqBqxdaizPzSlL25LT-43" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="7xLqBqxdaizPzSlL25LT-38" target="7xLqBqxdaizPzSlL25LT-42" edge="1">

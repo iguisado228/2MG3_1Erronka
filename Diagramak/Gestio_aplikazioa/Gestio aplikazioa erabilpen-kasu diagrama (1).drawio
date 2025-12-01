@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram name="Página-1" id="4XRAuRO7rEaU99lcQhEw">
-    <mxGraphModel dx="1895" dy="2369" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1068" dy="1719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -172,16 +172,30 @@
             <mxPoint x="790" y="-190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QIIFdU9Dl0SP1taVYJTH-3" value="Jatetxeko material eta altzarien stocka kudeatu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="QIIFdU9Dl0SP1taVYJTH-3" value="Jatetxeko material eta altzarien stocka kudeatu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="480" y="720" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="QIIFdU9Dl0SP1taVYJTH-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;exitX=0.703;exitY=0.963;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.019;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="TN8kj_T0ZATmTeTtItq_-6" target="QIIFdU9Dl0SP1taVYJTH-3">
+        <mxCell id="QIIFdU9Dl0SP1taVYJTH-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;exitX=0.703;exitY=0.963;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.019;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TN8kj_T0ZATmTeTtItq_-6" target="QIIFdU9Dl0SP1taVYJTH-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="360" y="620" as="sourcePoint" />
             <mxPoint x="496" y="712" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QIIFdU9Dl0SP1taVYJTH-6" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QIIFdU9Dl0SP1taVYJTH-5">
+        <mxCell id="QIIFdU9Dl0SP1taVYJTH-6" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QIIFdU9Dl0SP1taVYJTH-5" vertex="1" connectable="0">
+          <mxGeometry x="0.0943" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Be2ljovAJrymYfyHYQ0d-1" value="Hornitzaileak kudeatu" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="381" y="260" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Be2ljovAJrymYfyHYQ0d-2" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;exitX=0.556;exitY=0.004;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="Be2ljovAJrymYfyHYQ0d-1" source="TN8kj_T0ZATmTeTtItq_-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="440" as="sourcePoint" />
+            <mxPoint x="460" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Be2ljovAJrymYfyHYQ0d-3" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Be2ljovAJrymYfyHYQ0d-2">
           <mxGeometry x="0.0943" y="1" relative="1" as="geometry">
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
