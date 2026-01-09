@@ -28,7 +28,7 @@ CREATE TABLE `erreserbak` (
   `telefonoa` varchar(9) NOT NULL,
   `pertsona_kopurua` int NOT NULL,
   `eguna_ordua` datetime NOT NULL,
-  `prezio_totala` double NOT NULL,
+  `prezio_totala` double DEFAULT NULL,
   `faktura_ruta` varchar(45) DEFAULT NULL,
   `langileak_id` int NOT NULL,
   `mahaiak_id` int NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `eskariak` (
   CONSTRAINT `FK_8E810A89` FOREIGN KEY (`erreserbak_mahaiak_id`) REFERENCES `mahaiak` (`id`),
   CONSTRAINT `FK_A612A34C` FOREIGN KEY (`erreserbak_langileak_id`) REFERENCES `langileak` (`id`),
   CONSTRAINT `fk_eskariak_erreserbak1` FOREIGN KEY (`erreserbak_id`, `erreserbak_langileak_id`, `erreserbak_mahaiak_id`) REFERENCES `erreserbak` (`id`, `langileak_id`, `mahaiak_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,7 +86,7 @@ CREATE TABLE `eskariak` (
 
 LOCK TABLES `eskariak` WRITE;
 /*!40000 ALTER TABLE `eskariak` DISABLE KEYS */;
-INSERT INTO `eskariak` VALUES (1,25,'Egoera',1,1,2),(2,50.2,'Egoera',4,4,1),(3,29.5,'Bidalita',1,1,2),(4,38,'Bidalita',1,1,2),(5,17.5,'Bidalita',1,1,2),(6,57,'Bidalita',1,1,2),(7,17.6,'Bidalita',7,7,8),(8,62,'Bidalita',7,7,8),(9,59,'Bidalita',1,1,2),(10,20.5,'Bidalita',1,1,2),(11,15,'Bidalita',1,1,2),(13,37,'Bidalita',1,1,2),(14,9,'Bidalita',1,1,2),(15,8,'Bidalita',1,1,2),(16,36,'Bidalita',1,1,2),(17,53.5,'Bidalita',1,1,2),(18,39,'Bidalita',1,1,2),(19,10,'Bidalita',1,1,2),(20,64,'Bidalita',1,1,2),(21,43,'Bidalita',1,1,2),(22,20,'Bidalita',1,1,2),(23,18.5,'Bidalita',1,1,2),(24,35,'Bidalita',1,1,2),(25,14.5,'Bidalita',9,9,9),(26,29,'Bidalita',6,6,6),(27,27,'Bidalita',6,6,6),(28,129,'Bidalita',6,6,6),(29,59,'Bidalita',9,9,9);
+INSERT INTO `eskariak` VALUES (1,25,'Egoera',1,1,2),(2,50.2,'Egoera',4,4,1),(3,29.5,'Bidalita',1,1,2),(4,38,'Bidalita',1,1,2),(5,17.5,'Bidalita',1,1,2),(6,57,'Bidalita',1,1,2),(7,17.6,'Bidalita',7,7,8),(8,62,'Bidalita',7,7,8),(9,59,'Bidalita',1,1,2),(10,20.5,'Bidalita',1,1,2),(11,15,'Bidalita',1,1,2),(13,37,'Bidalita',1,1,2),(14,9,'Bidalita',1,1,2),(15,8,'Bidalita',1,1,2),(16,36,'Bidalita',1,1,2),(17,53.5,'Bidalita',1,1,2),(18,39,'Bidalita',1,1,2),(19,10,'Bidalita',1,1,2),(20,64,'Bidalita',1,1,2),(21,43,'Bidalita',1,1,2),(22,20,'Bidalita',1,1,2),(23,18.5,'Bidalita',1,1,2),(24,35,'Bidalita',1,1,2),(25,14.5,'Bidalita',9,9,9),(26,29,'Bidalita',6,6,6),(27,27,'Bidalita',6,6,6),(28,129,'Bidalita',6,6,6),(29,59,'Bidalita',9,9,9),(30,22.5,'Bidalita',1,1,2),(31,70.8,'Bidalita',1,1,2),(32,125,'Bidalita',7,7,8),(33,5,'Bidalita',1,1,2);
 /*!40000 ALTER TABLE `eskariak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +120,7 @@ CREATE TABLE `eskariak_has_produktuak` (
 
 LOCK TABLES `eskariak_has_produktuak` WRITE;
 /*!40000 ALTER TABLE `eskariak_has_produktuak` DISABLE KEYS */;
-INSERT INTO `eskariak_has_produktuak` VALUES (1,46,2,4),(1,51,1,11),(1,55,1,10),(2,31,4,7.2),(2,53,2,28),(2,54,1,15),(3,46,1,2),(3,47,1,3.5),(3,51,1,11),(3,52,1,13),(4,41,1,6.5),(4,46,2,4),(4,47,1,3.5),(4,48,2,6),(4,60,2,18),(5,41,1,6.5),(5,42,2,8),(5,48,1,3),(6,40,2,14),(6,41,2,13),(6,46,2,4),(6,52,2,26),(7,31,2,3.6),(7,32,1,6.5),(7,57,1,7.5),(8,42,2,8),(8,52,2,26),(8,53,2,28),(9,36,1,8),(9,40,1,7),(9,41,1,6.5),(9,42,1,4),(9,47,1,3.5),(9,48,1,3),(9,52,1,13),(9,53,1,14),(10,41,1,6.5),(10,42,1,4),(10,47,2,7),(10,48,1,3),(11,54,1,15),(13,52,1,13),(13,54,1,15),(13,60,1,9),(14,60,1,9),(15,42,2,8),(16,48,2,6),(16,54,2,30),(17,35,1,5.5),(17,41,1,6.5),(17,47,1,3.5),(17,51,1,11),(17,52,1,13),(17,53,1,14),(18,54,2,30),(18,60,1,9),(19,39,1,6),(19,46,2,4),(20,53,2,28),(20,54,2,30),(20,58,1,6),(21,53,2,28),(21,54,1,15),(22,36,2,16),(22,42,1,4),(23,35,1,5.5),(23,41,2,13),(24,47,2,7),(24,53,2,28),(25,41,1,6.5),(25,42,1,4),(25,46,2,4),(26,53,1,14),(26,54,1,15),(27,60,3,27),(28,45,2,5),(28,53,2,28),(28,54,2,30),(28,59,2,21),(28,60,5,45),(29,41,2,13),(29,42,1,4),(29,53,3,42);
+INSERT INTO `eskariak_has_produktuak` VALUES (1,46,2,4),(1,51,1,11),(1,55,1,10),(2,31,4,7.2),(2,53,2,28),(2,54,1,15),(3,46,1,2),(3,47,1,3.5),(3,51,1,11),(3,52,1,13),(4,41,1,6.5),(4,46,2,4),(4,47,1,3.5),(4,48,2,6),(4,60,2,18),(5,41,1,6.5),(5,42,2,8),(5,48,1,3),(6,40,2,14),(6,41,2,13),(6,46,2,4),(6,52,2,26),(7,31,2,3.6),(7,32,1,6.5),(7,57,1,7.5),(8,42,2,8),(8,52,2,26),(8,53,2,28),(9,36,1,8),(9,40,1,7),(9,41,1,6.5),(9,42,1,4),(9,47,1,3.5),(9,48,1,3),(9,52,1,13),(9,53,1,14),(10,41,1,6.5),(10,42,1,4),(10,47,2,7),(10,48,1,3),(11,54,1,15),(13,52,1,13),(13,54,1,15),(13,60,1,9),(14,60,1,9),(15,42,2,8),(16,48,2,6),(16,54,2,30),(17,35,1,5.5),(17,41,1,6.5),(17,47,1,3.5),(17,51,1,11),(17,52,1,13),(17,53,1,14),(18,54,2,30),(18,60,1,9),(19,39,1,6),(19,46,2,4),(20,53,2,28),(20,54,2,30),(20,58,1,6),(21,53,2,28),(21,54,1,15),(22,36,2,16),(22,42,1,4),(23,35,1,5.5),(23,41,2,13),(24,47,2,7),(24,53,2,28),(25,41,1,6.5),(25,42,1,4),(25,46,2,4),(26,53,1,14),(26,54,1,15),(27,60,3,27),(28,45,2,5),(28,53,2,28),(28,54,2,30),(28,59,2,21),(28,60,5,45),(29,41,2,13),(29,42,1,4),(29,53,3,42),(30,36,2,16),(30,45,1,2.5),(30,46,2,4),(31,36,3,24),(31,41,4,26),(31,44,1,3.8),(31,45,2,5),(31,48,4,12),(32,34,2,30),(32,35,2,11),(32,36,2,16),(32,40,9,63),(32,45,2,5),(33,45,2,5);
 /*!40000 ALTER TABLE `eskariak_has_produktuak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +196,7 @@ CREATE TABLE `langileak` (
   `tpv_sarrera` tinyint NOT NULL,
   `TpvSarrera` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -221,6 +221,7 @@ CREATE TABLE `mahaiak` (
   `zenbakia` int NOT NULL,
   `pertsona_kopuru` int NOT NULL,
   `kokapena` varchar(25) NOT NULL,
+  `pertsona_kopurua` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -231,7 +232,7 @@ CREATE TABLE `mahaiak` (
 
 LOCK TABLES `mahaiak` WRITE;
 /*!40000 ALTER TABLE `mahaiak` DISABLE KEYS */;
-INSERT INTO `mahaiak` VALUES (1,1,4,'barneko gunea'),(2,2,2,'kanpoko terraza'),(3,3,6,'barneko gunea'),(4,4,4,'leiho ondoan'),(5,5,8,'areto nagusia'),(6,6,2,'kanpoko terraza'),(7,7,4,'barneko gunea'),(8,8,10,'areto nagusia'),(9,9,6,'leiho ondoan'),(10,10,2,'kanpoko terraza');
+INSERT INTO `mahaiak` VALUES (1,1,4,'barneko gunea',NULL),(2,2,2,'kanpoko terraza',NULL),(3,3,6,'barneko gunea',NULL),(4,4,4,'leiho ondoan',NULL),(5,5,8,'areto nagusia',NULL),(6,6,2,'kanpoko terraza',NULL),(7,7,4,'barneko gunea',NULL),(8,8,10,'areto nagusia',NULL),(9,9,6,'leiho ondoan',NULL),(10,10,2,'kanpoko terraza',NULL);
 /*!40000 ALTER TABLE `mahaiak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,4 +388,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-18 14:56:38
+-- Dump completed on 2026-01-09 13:23:59
