@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: 2mg3_1erronka
+-- Host: 192.168.1.112    Database: 2mg3_1erronka
 -- ------------------------------------------------------
--- Server version	8.0.39
+-- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,6 +29,7 @@ CREATE TABLE `erreserbak` (
   `pertsona_kopurua` int NOT NULL,
   `eguna_ordua` datetime NOT NULL,
   `prezio_totala` double DEFAULT NULL,
+  `ordainduta` tinyint NOT NULL,
   `faktura_ruta` varchar(45) DEFAULT NULL,
   `langileak_id` int NOT NULL,
   `mahaiak_id` int NOT NULL,
@@ -41,7 +42,7 @@ CREATE TABLE `erreserbak` (
   CONSTRAINT `FK_9CEB933F` FOREIGN KEY (`mahaiak_id`) REFERENCES `mahaiak` (`id`),
   CONSTRAINT `fk_erreserbak_langileak1` FOREIGN KEY (`langileak_id`) REFERENCES `langileak` (`id`),
   CONSTRAINT `fk_erreserbak_mahaiak1` FOREIGN KEY (`mahaiak_id`) REFERENCES `mahaiak` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,7 +51,7 @@ CREATE TABLE `erreserbak` (
 
 LOCK TABLES `erreserbak` WRITE;
 /*!40000 ALTER TABLE `erreserbak` DISABLE KEYS */;
-INSERT INTO `erreserbak` VALUES (1,'Ane Olaizola','688123456',2,'2025-12-15 13:30:00',35,NULL,1,2),(2,'Jon Arrieta','677987654',4,'2025-12-15 14:00:00',72,NULL,2,3),(3,'Maite Zubizarreta','666112233',6,'2025-12-15 15:00:00',108,NULL,3,5),(4,'Iker Lasa','699445566',3,'2025-12-16 12:30:00',54,NULL,4,1),(5,'Nerea Goikoetxea','644778899',5,'2025-12-16 13:00:00',90,NULL,5,4),(6,'Mikel Urrutia','655334455',2,'2025-12-16 14:30:00',36,NULL,6,6),(7,'Leire Mendizabal','688998877',8,'2025-12-17 13:00:00',144,NULL,7,8),(8,'Asier Olano','677223344',4,'2025-12-17 14:00:00',72,NULL,8,7),(9,'Irati Agirre','699556677',3,'2025-12-17 15:30:00',54,NULL,9,9),(10,'Unai Salaberria','644889900',6,'2025-12-18 13:30:00',108,NULL,10,10);
+INSERT INTO `erreserbak` VALUES (1,'Ane Olaizola','688123456',2,'2025-12-15 13:30:00',1256.8,1,'/tiketak/tiket_1.pdf',1,2),(2,'Jon Arrieta','677987654',4,'2025-12-15 14:00:00',72,0,NULL,2,3),(3,'Maite Zubizarreta','666112233',6,'2025-12-15 15:00:00',108,0,NULL,3,5),(4,'Iker Lasa','699445566',3,'2025-12-16 12:30:00',99.8,0,'',4,1),(5,'Nerea Goikoetxea','644778899',5,'2025-12-16 13:00:00',90,0,NULL,5,4),(6,'Mikel Urrutia','655334455',2,'2025-12-16 14:30:00',36,0,NULL,6,6),(7,'Leire Mendizabal','688998877',8,'2025-12-17 13:00:00',144,0,NULL,7,8),(8,'Asier Olano','677223344',4,'2025-12-17 14:00:00',72,0,NULL,8,7),(9,'Irati Agirre','699556677',3,'2025-12-17 15:30:00',174.5,1,'/tiketak/tiket_9.pdf',9,9),(10,'Unai Salaberria','644889900',6,'2025-12-18 13:30:00',0,0,'',10,10),(11,'hodetxe','111111111',2,'2026-01-09 13:41:42',0,0,'',1,6),(12,'paxpan','123456789',5,'2026-01-09 13:30:00',0,0,'',1,8),(13,'periko','123123123',12,'2026-01-16 21:30:00',0,0,'',1,1),(14,'beñat','123456789',12,'2026-01-14 12:30:00',0,0,'',1,6);
 /*!40000 ALTER TABLE `erreserbak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,7 +78,7 @@ CREATE TABLE `eskariak` (
   CONSTRAINT `FK_8E810A89` FOREIGN KEY (`erreserbak_mahaiak_id`) REFERENCES `mahaiak` (`id`),
   CONSTRAINT `FK_A612A34C` FOREIGN KEY (`erreserbak_langileak_id`) REFERENCES `langileak` (`id`),
   CONSTRAINT `fk_eskariak_erreserbak1` FOREIGN KEY (`erreserbak_id`, `erreserbak_langileak_id`, `erreserbak_mahaiak_id`) REFERENCES `erreserbak` (`id`, `langileak_id`, `mahaiak_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +139,7 @@ CREATE TABLE `gordetzeko_elementuak` (
   PRIMARY KEY (`id`,`hornitzaileak_id`),
   KEY `fk_gordetzeko_elementuak_hornitzaileak1_idx` (`hornitzaileak_id`),
   CONSTRAINT `fk_gordetzeko_elementuak_hornitzaileak1` FOREIGN KEY (`hornitzaileak_id`) REFERENCES `hornitzaileak` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,6 +148,7 @@ CREATE TABLE `gordetzeko_elementuak` (
 
 LOCK TABLES `gordetzeko_elementuak` WRITE;
 /*!40000 ALTER TABLE `gordetzeko_elementuak` DISABLE KEYS */;
+INSERT INTO `gordetzeko_elementuak` VALUES (3,1,1);
 /*!40000 ALTER TABLE `gordetzeko_elementuak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +198,7 @@ CREATE TABLE `langileak` (
   `tpv_sarrera` tinyint NOT NULL,
   `TpvSarrera` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -205,7 +207,7 @@ CREATE TABLE `langileak` (
 
 LOCK TABLES `langileak` WRITE;
 /*!40000 ALTER TABLE `langileak` DISABLE KEYS */;
-INSERT INTO `langileak` VALUES (1,'adm','adm','1','adm',1234,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'a',1,NULL),(2,'Ane','Etxeberria','12345678A','aneetx',1001,'1234',1,'Kale Nagusia 12, Ordizia',0,NULL),(3,'Jon','Zubizarreta','23456789B','jonzub',1002,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'San Juan kalea 8, Beasain',1,NULL),(4,'Maite','Lasa','34567890C','maitelasa',1003,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Euskadi plaza 3, Tolosa',1,NULL),(5,'Iker','Goikoetxea','45678901D','ikergoi',1004,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Iturria kalea 5, Lazkao',0,NULL),(6,'Nerea','Arrieta','56789012E','nerearri',1005,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Santa Klara kalea 7, Donostia',1,NULL),(7,'Mikel','Urrutia','67890123F','mikelurru',1006,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Loiola kalea 3, Hernani',1,NULL),(8,'Leire','Mendizabal','78901234G','leiremendi',1007,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Txalupa kalea 11, Irun',0,NULL),(9,'Asier','Olano','89012345H','asierolano',1008,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Araba kalea 9, Gasteiz',1,NULL),(10,'Irati','Agirre','90123456I','iratiagirre',1009,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Larramendi kalea 6, Azpeitia',1,NULL),(11,'Unai','Salaberria','01234567J','unaisala',1010,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Urumea kalea 6, Astigarraga',0,NULL);
+INSERT INTO `langileak` VALUES (1,'adm','adm','1','adm',1234,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'a',1,NULL),(2,'Ane','Etxeberria','12345678A','aneetx',1001,'1234',1,'Kale Nagusia 12, Ordizia',0,NULL),(3,'Jon','Zubizarreta','23456789B','jonzub',1002,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'San Juan kalea 8, Beasain',1,NULL),(4,'Maite','Lasa','34567890C','maitelasa',1003,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Euskadi plaza 3, Tolosa',1,NULL),(5,'Iker','Goikoetxea','45678901D','ikergoi',1004,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Iturria kalea 5, Lazkao',0,NULL),(6,'Nerea','Arrieta','56789012E','nerearri',1005,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Santa Klara kalea 7, Donostia',1,NULL),(7,'Mikel','Urrutia','67890123F','mikelurru',1006,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Loiola kalea 3, Hernani',1,NULL),(8,'Leire','Mendizabal','78901234G','leiremendi',1007,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Txalupa kalea 11, Irun',0,NULL),(9,'Asier','Olano','89012345H','asierolano',1008,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Araba kalea 9, Gasteiz',1,NULL),(10,'Irati','Agirre','90123456I','iratiagirre',1009,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',0,'Larramendi kalea 6, Azpeitia',1,NULL),(11,'Unai','Salaberria','01234567J','unaisala',1010,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Urumea kalea 6, Astigarraga',0,NULL),(13,'Hodei','Etxeberria','34364283Y','hodetxe',3333,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',1,'Andoain',1,NULL);
 /*!40000 ALTER TABLE `langileak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,11 +221,10 @@ DROP TABLE IF EXISTS `mahaiak`;
 CREATE TABLE `mahaiak` (
   `id` int NOT NULL AUTO_INCREMENT,
   `zenbakia` int NOT NULL,
-  `pertsona_kopuru` int NOT NULL,
+  `pertsona_kopurua` int NOT NULL,
   `kokapena` varchar(25) NOT NULL,
-  `pertsona_kopurua` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +233,7 @@ CREATE TABLE `mahaiak` (
 
 LOCK TABLES `mahaiak` WRITE;
 /*!40000 ALTER TABLE `mahaiak` DISABLE KEYS */;
-INSERT INTO `mahaiak` VALUES (1,1,4,'barneko gunea',NULL),(2,2,2,'kanpoko terraza',NULL),(3,3,6,'barneko gunea',NULL),(4,4,4,'leiho ondoan',NULL),(5,5,8,'areto nagusia',NULL),(6,6,2,'kanpoko terraza',NULL),(7,7,4,'barneko gunea',NULL),(8,8,10,'areto nagusia',NULL),(9,9,6,'leiho ondoan',NULL),(10,10,2,'kanpoko terraza',NULL);
+INSERT INTO `mahaiak` VALUES (1,1,4,'barneko gunea'),(2,2,2,'kanpoko terraza'),(3,3,6,'barneko gunea'),(4,4,4,'leiho ondoan'),(5,5,8,'areto nagusia'),(6,6,2,'kanpoko terraza'),(7,7,4,'barneko gunea'),(8,8,10,'areto nagusia'),(9,9,6,'leiho ondoan'),(10,10,2,'kanpoko terraza');
 /*!40000 ALTER TABLE `mahaiak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,7 +253,7 @@ CREATE TABLE `materialak` (
   PRIMARY KEY (`id`),
   KEY `fk_materialak_hornitzaileak1_idx` (`hornitzaileak_id`),
   CONSTRAINT `fk_materialak_hornitzaileak1` FOREIGN KEY (`hornitzaileak_id`) REFERENCES `hornitzaileak` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -330,6 +331,7 @@ DROP TABLE IF EXISTS `produktuak_has_osagaiak`;
 CREATE TABLE `produktuak_has_osagaiak` (
   `produktuak_id` int NOT NULL,
   `osagaiak_id` int NOT NULL,
+  `kantitatea` int NOT NULL,
   PRIMARY KEY (`produktuak_id`,`osagaiak_id`),
   KEY `fk_produktuak_has_osagaiak_osagaiak1_idx` (`osagaiak_id`),
   KEY `fk_produktuak_has_osagaiak_produktuak1_idx` (`produktuak_id`),
@@ -348,7 +350,7 @@ CREATE TABLE `produktuak_has_osagaiak` (
 
 LOCK TABLES `produktuak_has_osagaiak` WRITE;
 /*!40000 ALTER TABLE `produktuak_has_osagaiak` DISABLE KEYS */;
-INSERT INTO `produktuak_has_osagaiak` VALUES (31,61),(32,62),(59,62),(33,63),(34,64),(35,65),(41,65),(58,65),(35,66),(37,66),(32,67),(33,67),(35,67),(38,67),(39,67),(41,67),(50,67),(51,67),(52,67),(53,67),(54,67),(56,67),(57,67),(58,67),(59,67),(32,68),(33,68),(34,68),(35,68),(38,68),(39,68),(40,68),(50,68),(51,68),(52,68),(53,68),(54,68),(55,68),(56,68),(57,68),(59,68),(60,68),(34,69),(32,70),(43,70),(36,72),(37,72),(47,72),(58,72),(43,73),(49,73),(38,74),(36,75),(37,75),(40,75),(39,76),(50,76),(41,77),(42,78),(35,80),(41,80),(35,81),(59,84),(60,87),(39,90),(57,90),(43,91),(44,92),(45,93),(46,94),(44,95),(42,96),(47,96),(48,98),(48,99),(42,100),(44,100),(49,100),(50,102),(51,103),(52,104),(53,105),(54,106),(55,107),(56,108),(52,109),(54,109),(33,110),(56,110),(36,111),(58,111),(37,114),(37,115),(55,116),(57,116),(36,117),(37,117),(40,117),(60,119);
+INSERT INTO `produktuak_has_osagaiak` VALUES (31,61,0),(32,62,0),(32,67,0),(32,68,0),(32,70,0),(33,63,0),(33,67,0),(33,68,0),(33,110,0),(34,64,0),(34,68,0),(34,69,0),(35,65,0),(35,66,0),(35,67,0),(35,68,0),(35,80,0),(35,81,0),(36,72,0),(36,75,0),(36,111,0),(36,117,0),(37,66,0),(37,72,0),(37,75,0),(37,114,0),(37,115,0),(37,117,0),(38,67,0),(38,68,0),(38,74,0),(39,67,0),(39,68,0),(39,76,0),(39,90,0),(40,68,0),(40,75,0),(40,117,0),(41,65,0),(41,67,0),(41,77,0),(41,80,0),(42,78,0),(42,96,0),(42,100,0),(43,70,0),(43,73,0),(43,91,0),(44,92,0),(44,95,0),(44,100,0),(45,93,0),(46,94,0),(47,72,0),(47,96,0),(48,98,0),(48,99,0),(49,73,0),(49,100,0),(50,67,0),(50,68,0),(50,76,0),(50,102,0),(51,67,0),(51,68,0),(51,103,0),(52,67,0),(52,68,0),(52,104,0),(52,109,0),(53,67,0),(53,68,0),(53,105,0),(54,67,0),(54,68,0),(54,106,0),(54,109,0),(55,68,0),(55,107,0),(55,116,0),(56,67,0),(56,68,0),(56,108,0),(56,110,0),(57,67,0),(57,68,0),(57,90,0),(57,116,0),(58,65,0),(58,67,0),(58,72,0),(58,111,0),(59,62,0),(59,67,0),(59,68,0),(59,84,0),(60,68,0),(60,87,0),(60,119,0);
 /*!40000 ALTER TABLE `produktuak_has_osagaiak` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -388,4 +390,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-09 13:23:59
+-- Dump completed on 2026-01-16 16:05:07
